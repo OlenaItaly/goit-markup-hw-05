@@ -313,8 +313,9 @@ body {
   left: 0px;
   top: 44px;
 
-  background: #404bbf;
+  background:var(--color-activ-line);
   border-radius: 2px;
+  
 }
 
 /*================= SECTION ================== */
