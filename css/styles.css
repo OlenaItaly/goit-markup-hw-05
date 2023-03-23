@@ -302,10 +302,10 @@ body {
 .ativ {
   position: relative;
 }
-.curent {
+.current {
   color: var(--colore-menu-hfa);
 }
-.curent::after {
+.current::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -445,7 +445,7 @@ body {
   border-radius: 50%;
   background-color: var(--colore-backgrond-icon);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 .social-link:hover,
 .social-link:focus {
@@ -479,8 +479,8 @@ body {
   justify-content: center;
   color: var(--colore-customers-icon);
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition-duration) var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function);
 }
 
 .customer-icon {
@@ -523,7 +523,7 @@ body {
 .social-footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 .social-footer .social-link:hover,
 .social-footer .social-link:focus {
@@ -635,6 +635,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .card-text {
   width: 360px;
