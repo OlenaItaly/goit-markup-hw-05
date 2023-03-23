@@ -48,20 +48,22 @@
   --colore-text-overlay: #f4f4fd;
 
   /* colore modal window */
-  --colore-backgroun-icon-close:#e7e9fc;
+  --colore-backgroun-icon-close: #e7e9fc;
   --colore-background-modal: #fcfcfc;
   --colore-background-backdrop: rgba(46, 47, 66, 0.4);
+  
+
+  /* color activ line */
+  --color-activ-line: #404bbf;
 
   /* =============/COLORI==================== */
-  
+
   /* ==============ANIMATION================= */
-  
+
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* =============/ANIMATION================= */
-  
-}
+
+  /* =============/ANIMATION================= */}
 /* ============скидання стилів (параметрів)============ */
 h1,
 h2,
@@ -69,8 +71,8 @@ h3,
 h4,
 p {
   margin: 0;
-  
-  }
+}
+
 ul {
   margin-top: 0;
   margin-bottom: 0;
@@ -137,6 +139,7 @@ body {
 .title-h-three {
   color: var(--colore-title);
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -149,10 +152,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* invisible title portfolio main */
-/* .Invisible-title {
-  color: var(--colore-background-body);
-} */
+
 /*================ BUTTON ==================*/
 .hero .button,
 .nav .button {
@@ -163,12 +163,15 @@ body {
   line-height: 1.5;
   border-radius: 4px;
   letter-spacing: 0.04em;
+
+  cursor: pointer;
+}
+
+.hero .button {
   background-color: var(--color-button-primery);
   color: var(--color-buton-white);
-  cursor: pointer;
-
-  transition: background-color var(--transition-duration) var(--transition-timing-function);
-  
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .hero .button:hover,
@@ -181,9 +184,10 @@ body {
   color: var(--color-button-primery);
   background-color: var(--color-button-nav);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duration)
+      var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .nav .button:hover,
@@ -193,6 +197,7 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
 /* ===============CONTEINER================ */
 .conteiner {
   max-width: 1158px;
@@ -277,6 +282,11 @@ body {
 
 .address {
   font-style: normal;
+}
+.menu .link,
+.mail .link,
+.tel .link {
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .menu .link:hover,
 .menu .link:focus,
@@ -523,7 +533,6 @@ body {
   gap: 16px;
 }
 
-
 /* ============ MODAL WINDOW================= */
 
 .backdrop {
@@ -534,7 +543,9 @@ body {
   top: 0px;
   background-color: var(--colore-background-backdrop);
 
-  transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
+  transition: opacity var(--transition-duration)
+      var(--transition-timing-function),
+    visibility var(--transition-duration) var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -570,12 +581,12 @@ body {
   position: absolute;
   top: 24px;
   right: 24px;
-   transition: background-color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
- background-color:var(--colore-backgrond-icon-hf);
- 
+  background-color: var(--colore-backgrond-icon-hf);
 }
 .modal-icon-close {
   transition: fill var(--transition-duration) var(--transition-timing-function);
@@ -583,9 +594,8 @@ body {
 
 .modal-close-btn:hover .modal-icon-close,
 .modal-close-btn:focus .modal-icon-close {
- fill: var(--color-buton-white);
+  fill: var(--color-buton-white);
 }
-
 
 /* ======section Portfolio nav================= */
 
@@ -656,7 +666,8 @@ body {
   overflow: auto;
   transform: translateY(100%);
 
-  transition: transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .card-item .link:hover .overlay,
