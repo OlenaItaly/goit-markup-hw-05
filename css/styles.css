@@ -560,12 +560,18 @@ body {
   height: 576px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
+  
   background: var(--colore-background-modal);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+transform: translate(-50%, -50%) scale(1);
+transition: transform  500ms var(--transition-timing-function);
+
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%,-50%) scaley(0);
 }
 .modal-close-btn {
   display: flex;
